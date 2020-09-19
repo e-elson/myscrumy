@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import get_grading_parameters
+from .views import index
 
 urlpatterns = [
-    path('', get_grading_parameters),
+    path('', index),
 ]
