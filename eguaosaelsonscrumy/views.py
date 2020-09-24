@@ -20,7 +20,11 @@ def index(request):
     return HttpResponse(goal)
 
 def move_goal(request,goal_id):
-    goal = ScrumyGoals.objects.get(goal_id = goal_id)
+    try:
+        goal = ScrumyGoals.objects.get(goal_id = goal_id)
+    except ScrumyGoals.DoesNotExist:
+        context = {'error':'A record with that goal id does not exist'}
+        return render(request,'eguaosaelsonscrumy/exception.html', context)
     return HttpResponse(goal)
 
 def add_goal(request):
