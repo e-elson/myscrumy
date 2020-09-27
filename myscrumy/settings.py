@@ -20,15 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'tjb2@=2e-zzma@hm()u2@z94u@@xu53%fef__%63b2hgfu2r32'
+SECRET_KEY = 'i6@o-yff^hsr(g4pl%0q9qj(t^km7i+(b%2k!%&@4ceordljpr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["18.220.70.182",
-                 '127.0.0.1',
-                 '0.0.0.0',
-                 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eguaosaelsonscrumy',
+    'websocket',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +120,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/eguaosaelsonscrumy/home'
